@@ -2,13 +2,13 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "web.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "dev": "nodemon src/app/index.js",
-    "web": "node src/app/index.js",
+    "dev": "nodemon src/app/web.js",
+    "start": "node src/app/web.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
