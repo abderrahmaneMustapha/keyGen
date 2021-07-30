@@ -5,6 +5,7 @@
 var http = require('http');
 const express = require('express')
 var cors = require('cors')
+const bodyParser = require('body-parser');
 
 //============
 
@@ -17,9 +18,11 @@ require('./middlewares/mongoose')
 //====
 
 //====
-var serverPort = process.env.PORT  || 8080;
 const app = express()
+const serverPort = process.env.PORT  || 8080;
+
 app.use(cors())
+app.use(express.json())
 //====
 
 //app routes

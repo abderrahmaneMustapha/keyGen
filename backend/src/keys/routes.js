@@ -6,6 +6,6 @@ const router = express.Router()
 
 router.get('/',keyControllers.getKeys)
 router.post('/',keyControllers.createKeys)
-router.delete('/',keyControllers.deleteKeys)
+router.delete('/:id',keyControllers.deleteKeys)
 
 module.exports = router;

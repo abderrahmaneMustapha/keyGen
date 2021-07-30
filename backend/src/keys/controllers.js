@@ -22,7 +22,7 @@ exports.getKeys = function getKeys (req, res, next) {
 exports.createKeys = function getKeys (req, res, next) {
     // createKeys is a function to create 
     // keys in the database
-    keyService.createKey()
+     keyService.createKey(req.body.key)
     .then(function (response) {
       utils.writeJson(res, response);
     })
@@ -34,7 +34,9 @@ exports.createKeys = function getKeys (req, res, next) {
 exports.deleteKeys = function deleteKeys (req, res, next) {
   // deleteKeys is a function to delete 
   // keys in the database
-  keyService.deleteKey()
+  console.log(req.params.id)
+  keyService.deleteKey(req.params.id)
+  
   .then(function (response) {
     utils.writeJson(res, response, 204);
   })
