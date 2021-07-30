@@ -7,8 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "web": "nodemon src/app/index.js",
-    "start": "node src/app/index.js",
+    "dev": "nodemon src/app/index.js",
+    "web": "node src/app/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

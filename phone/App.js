@@ -1,9 +1,7 @@
-
-import 'antd-mobile/dist/antd-mobile.css';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import Search from './screens/search/ui/search-ui'
-
+import 'antd-mobile/dist/antd-mobile.css';
 
 export default function App() {
   return (
