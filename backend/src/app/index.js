@@ -29,6 +29,9 @@ app.use(express.json())
 app.use('/api/keys/', keysRouter)
 //
 
+// == config part (will move this to a separate folder)
+require('dotenv').config()
+//== end
 // Initialize the Swagger middleware
 http.createServer(app).listen(serverPort, function () {
     console.log('Your server is listening on port %d (http://localhost:%d)', serverPort, serverPort);

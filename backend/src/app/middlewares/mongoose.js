@@ -1,6 +1,6 @@
 // connect to the database
 const mongoose = require('mongoose');
-const uri = "mongodb://localhost:27017/keygen"
+const uri = "mmongodb+srv://abdou:abdou@nodetuts.ue0yy.mongodb.net/keygen?retryWrites=true&w=majority"
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 var db = mongoose.connection
 // error
