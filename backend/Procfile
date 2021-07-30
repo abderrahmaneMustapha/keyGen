@@ -1,1 +1,0 @@
-web: node backend/src/app/web.js
