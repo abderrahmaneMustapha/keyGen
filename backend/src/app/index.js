@@ -1,11 +1,30 @@
 'use strict';
 
+
+//============= packages
 var http = require('http');
 const express = require('express')
-const app = express()
-var serverPort = process.env.PORT  || 8080;
+var cors = require('cors')
 
-// Create the app:
+//============
+
+//==== files
+const keysRouter = require('../keys/routes')
+//=====
+
+//==== db connection
+require('./middlewares/mongoose')
+//====
+
+//====
+var serverPort = process.env.PORT  || 8080;
+const app = express()
+app.use(cors())
+//====
+
+//app routes
+app.use('/api/keys/', keysRouter)
+//
 
 // Initialize the Swagger middleware
 http.createServer(app).listen(serverPort, function () {
