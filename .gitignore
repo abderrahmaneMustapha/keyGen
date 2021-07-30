@@ -1,1 +1,14 @@
 backend/node_modules
+phone/node_modules
+phone/.expo
+phone/npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+mobile/src/web-build/
+
+# macOS
+.DS_Store
