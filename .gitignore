@@ -1,4 +1,5 @@
 backend/node_modules
+mobile
 phone/node_modules
 phone/.expo
 phone/npm-debug.*
