@@ -10,6 +10,16 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "packagerOpts": {
+      "sourceExts": [
+        "js",
+        "json",
+        "ts",
+        "tsx",
+        "jsx",
+        "css"
+      ]
+    },
     "updates": {
       "fallbackToCacheTimeout": 0
     },

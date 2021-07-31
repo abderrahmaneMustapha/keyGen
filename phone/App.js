@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import Search from './screens/search/ui/search-ui'
-import 'antd-mobile/dist/antd-mobile.css';
-
+import "./assets/antd-mobile.css"
 export default function App() {
+  
   return (
     <View style={styles.container}>
     <Search styles={styles}  />
@@ -11,7 +11,7 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
+const styles =  StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
@@ -23,4 +23,5 @@ const styles = StyleSheet.create({
     marginLeft:'auto',
     marginRight: 'auto',
   }
+  
 });
