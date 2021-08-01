@@ -45,8 +45,10 @@ exports.getKeys =  (query)=>{
       query = " "
     }
   
-    if (query.length > 1 )
+    if (query.length > 1 ){
+    
     result = await Models.key.find({ name : query}).select('-_id -__v').sort({createdAt: "descending"});
+    }
     else 
     result = await Models.key.find({}).select('-_id -__v').sort({createdAt: "descending"});
     if (Object.keys(result).length > 0) {

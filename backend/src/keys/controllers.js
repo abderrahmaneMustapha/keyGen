@@ -25,6 +25,7 @@ exports.createKeys = function getKeys (req, res, next) {
     // keys in the database
      keyService.createKey(req.body.key)
     .then(function (response) {
+      console.log(response)
       utils.writeJson(res, response, response.code);
     })
     .catch(function (response) {
