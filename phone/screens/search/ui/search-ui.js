@@ -4,7 +4,9 @@ import { List, SearchBar, Button, Popover, Icon, Modal, Toast } from 'antd-mobil
 
 // this component show keys , and play the role of a main component for
 // this page
-const URL = 'https://keygen123.herokuapp.com/'
+
+const URL = 'http://localhost:8080/'
+//'https://keygen123.herokuapp.com/'
 export default function Search({ styles }) {
   const [items, setItems] = useState()
   const [query, setQuery] = useState()
@@ -86,6 +88,7 @@ const CModal = () => {
     })
       .then(response => response.json())
       .then(data => {
+        Toast.show(data.error)
         console.log(data)
       })
   }
