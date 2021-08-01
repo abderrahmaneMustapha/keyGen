@@ -9,8 +9,8 @@ const keyService = require("./services");
 exports.getKeys = function getKeys (req, res, next) {
     // getKeys is a function to get already 
     // generate keys from database
-
-    keyService.getKeys()
+    const query = req.query.query
+    keyService.getKeys(query)
       .then(function (response) {
         console.log(response)
         utils.writeJson(res, response);
