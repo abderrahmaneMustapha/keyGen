@@ -3,17 +3,26 @@ const Models = require('./models')
 var uuid = require('uuid');
 
 exports.createKey =  (key)=>{
-
+ 
   return new Promise( async function (resolve, reject) {
-    let result = new Models.key({id : uuid.v1(), name : key, key:uuid.v4()})
-    result.save()
+    var result = []
+    try{
+      result =  await Models.key.create({id : uuid.v1(), name : key, key:uuid.v4()})
+    }
+    catch(error){
+      if (error.message.indexOf("duplicate") > 0)
+      resolve({"error" : "a record with the same name already exists", "code": 409});
+      else
+      resolve({"error" : "cant create a new record", "code":  424});
+    }  
+    
     if (Object.keys(result).length > 0) {
       resolve(result[Object.keys(result)]);
     } else {
       resolve();
-    }
-  
+    }  
   })
+  
 }
 
 exports.deleteKey =  (id)=>{

@@ -12,6 +12,7 @@ exports.getKeys = function getKeys (req, res, next) {
 
     keyService.getKeys()
       .then(function (response) {
+        console.log(response)
         utils.writeJson(res, response);
       })
       .catch(function (response) {
@@ -24,7 +25,7 @@ exports.createKeys = function getKeys (req, res, next) {
     // keys in the database
      keyService.createKey(req.body.key)
     .then(function (response) {
-      utils.writeJson(res, response);
+      utils.writeJson(res, response, response.code);
     })
     .catch(function (response) {
       utils.writeJson(res, response);
