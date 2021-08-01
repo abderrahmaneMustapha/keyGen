@@ -5,7 +5,7 @@ import { List, SearchBar, Button, Popover, Icon, Modal, Toast, InputItem } from 
 // this component show keys , and play the role of a main component for
 // this page
 
-const URL = 'http://localhost:8080/'
+const URL = 'https://keygen123.herokuapp.com/'
 //'https://keygen123.herokuapp.com/'
 export default function Search({ styles }) {
   const [items, setItems] = useState()
@@ -13,13 +13,12 @@ export default function Search({ styles }) {
 
 
   const fetchData = async () => {
-    console.log(query)
-    await fetch(`${URL}api/keys?query=${query}`)
+  
+    let fetchUrl =  query ? `${URL}api/keys?query=${query}` : `${URL}api/keys`
+    await fetch(fetchUrl)
       .then(response => response.json())
       .then(data => {
-        
         setItems(data)
-        
       })
   }
   useEffect(() => {
