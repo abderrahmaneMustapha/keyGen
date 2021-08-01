@@ -12,7 +12,7 @@ exports.getKeys = function getKeys (req, res, next) {
     const query = req.query.query
     keyService.getKeys(query)
       .then(function (response) {
-        console.log(response)
+       
         utils.writeJson(res, response);
       })
       .catch(function (response) {
@@ -35,7 +35,7 @@ exports.createKeys = function getKeys (req, res, next) {
 exports.deleteKeys = function deleteKeys (req, res, next) {
   // deleteKeys is a function to delete 
   // keys in the database
-  console.log(req.params.id)
+
   keyService.deleteKey(req.params.id)
   
   .then(function (response) {
