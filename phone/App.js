@@ -1,13 +1,15 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import Search from './screens/search/ui/search-ui'
-import "./assets/antd-mobile.css"
+import { Provider} from '@ant-design/react-native';
 export default function App() {
   
   return (
-    <View style={styles.container}>
-    <Search styles={styles}  />
-    </View>
+    <Provider>
+      <View style={styles.container}>
+        <Search styles={styles}  />
+      </View>
+    </Provider>
   );
 }
 
