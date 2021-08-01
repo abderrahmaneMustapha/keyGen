@@ -22,6 +22,12 @@ const styles =  StyleSheet.create({
     width : '90%',
     marginLeft:'auto',
     marginRight: 'auto',
+    paddingTop: '0.6em'
+  },
+
+  button : {
+    width : '50%',
+    marginRight: 'auto'
   }
   
 });

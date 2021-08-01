@@ -40,7 +40,7 @@ exports.deleteKey =  (id)=>{
 
 exports.getKeys =  ()=>{
   return new Promise( async function (resolve, reject) {
-    let result = await Models.key.find({}).select('-_id -__v');
+    let result = await Models.key.find({}).select('-_id -__v').sort({createdAt: "descending"});
     if (Object.keys(result).length > 0) {
       resolve(result);
     } else {
